@@ -9,8 +9,7 @@
       <p><a href="https://goo.gl/maps/RyT6MKCAn4L2" target="_blank">≫Googlemapで見る</a></p>
     </div>
     <p class="tel">TEL：076-467-3569</p>
-
-TEL：076-467-3569</p>
+    <p>TEL：076-467-3569</p>
   </div>
 </template>
 
@@ -29,7 +28,7 @@ export default {
   align-items: center;
   justify-content: center;
   padding-left: 150px;
-  min-height: 100vh;
+  height: 100vh;
   background: rgba(#000, .85) url("../assets/images/address/bg_address.jpg") 50% 50% no-repeat;
   background-size: cover;
   font-size: 1.4rem;

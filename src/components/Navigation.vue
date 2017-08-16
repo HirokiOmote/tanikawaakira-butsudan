@@ -67,6 +67,14 @@ a {
     z-index: 100;
     width: 39px;
   }
+
+  a {
+    display: block;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 nav {
@@ -95,6 +103,7 @@ nav {
   a {
     &::before {
       padding-right: 8px;
+      content: url("../assets/images/common/icon_nav.png");
       content: image-set(url("../assets/images/common/icon_nav.png") 1x, url("../assets/images/common/icon_nav@2x.png") 2x);
     }
   }
