@@ -5,6 +5,7 @@ import 'picturefill'
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueGtm from 'vue-gtm'
 
 Vue.config.productionTip = false
 
@@ -14,4 +15,9 @@ new Vue({
   router,
   template: '<App/>',
   components: { App }
+})
+
+Vue.use(VueGtm, {
+  debug: false,
+  vueRouter: router
 })

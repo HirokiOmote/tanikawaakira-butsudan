@@ -26,6 +26,7 @@ html {
   font: {
     family: Georgia, "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
     size: 62.5%;
+    weight: 300;
   }
   font-feature-settings: "palt" 1;
   -webkit-font-smoothing: antialiased;

@@ -1,5 +1,7 @@
 <template>
   <section class="wrapper">
+    <div class="txt-headding">匠の技【工程】</div>
+
     <h1>
       <picture>
         <source media="(min-width: 768px)" srcset="../assets/images/skill/hd_skill_md.svg">
@@ -87,19 +89,40 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/common";
 
+.txt-headding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 46px;
+  font-size: 2.0rem;
+
+  @include media( md ) {
+    display: none;
+  }
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 150px;
+
   min-height: 100vh;
   background: rgba(#000, .85) url("../assets/images/skill/bg_skill.jpg") 50% 50% no-repeat;
   background-size: cover;
+
+  @include media( lg ) {
+    padding-left: 150px;
+  }
 }
 
 h1 {
-  margin-top: 43px;
+  padding: 0 15px;
+  margin-top: 24px;
+  @include media( md ) {
+    margin-top: 43px;
+  }
 }
 
 ul {
