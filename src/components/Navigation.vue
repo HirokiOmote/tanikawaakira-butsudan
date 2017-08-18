@@ -1,9 +1,9 @@
 <template>
   <div>
     <transition name="slide">
-      <div class="nav-wrap" v-show='menu || mqPC'>
+      <div class="nav-wrap" v-show='menu'>
         <div class="logo">
-          <router-link :to="{ path: '/' }">
+          <router-link :to="{ path: '/' }" v-on:click.native='menuClick'>
             <img src="../assets/images/common/logo.svg" alt="谷川彰仏壇店">
           </router-link>
         </div>
@@ -17,7 +17,7 @@
       </div>
     </transition>
 
-    <button type="button" v-on:click='menu = !menu' v-bind:class='{active:menu}' v-show='hamburger || mqPC'>
+    <button type="button" v-on:click='menu = !menu' v-bind:class='{active:menu}' v-show='hamburger'>
       <span></span>
       <span></span>
       <span></span>
@@ -32,18 +32,27 @@
     data () {
       return {
         menu: false,
-        hamburger: true,
-        mqPC: false
+        hamburger: true
       }
     },
 
-    created () {
+    mounted () {
+      this.noScroll()
       this.windowResize()
     },
 
     methods: {
+      noScroll () {
+        const scrollOff = (event) => {
+          if (this.menu && window.innerWidth < 1140) {
+            event.preventDefault()
+            console.log('noScroll')
+          }
+        }
+        document.addEventListener('touchmove', scrollOff, false)
+      },
       menuClick () {
-        if (window.innerWidth <= 1140) {
+        if (window.innerWidth < 1140) {
           this.menu = !this.menu
         }
       },
@@ -65,8 +74,6 @@
             if (resizeTimer !== false) {
               clearTimeout(resizeTimer)
               resizeTimer = setTimeout(() => {
-                console.log(window.innerWidth)
-                console.log(this.menu)
                 this.menu = true
                 this.hamburger = false
               }, interval)
@@ -97,15 +104,11 @@ a {
 
 .logo {
   position: absolute;
-  display: none;
-
-  @include media( lg ) {
-    bottom: 3vh;
-    left: 50px;
-    z-index: 100;
-    display: block;
-    width: 39px;
-  }
+  bottom: 3vh;
+  left: 50px;
+  z-index: 100;
+  display: block;
+  width: 39px;
 
   a {
     display: block;
@@ -170,7 +173,7 @@ nav {
 
 button {
   display: block;
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   right: 10px;
   top: 10px;

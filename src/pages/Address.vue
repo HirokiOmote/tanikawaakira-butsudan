@@ -44,6 +44,7 @@ export default {
   align-items: center;
   justify-content: center;
   padding: 15px;
+  min-height: 568px;
   height: calc( 100vh - 46px );
   background: rgba(#000, .85) url("../assets/images/address/bg_address.jpg") 50% 50% no-repeat;
   background-size: cover;

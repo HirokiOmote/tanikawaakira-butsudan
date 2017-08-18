@@ -27,6 +27,7 @@ export default {
   align-items: center;
   flex-direction: column;
   width: 100vw;
+  min-height: 568px;
   height: 100vh;
   background: #fff url("../assets/images/top/bg_top001.jpg") 50% 50% no-repeat;
   background-size: cover;
