@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="txt-headding">匠の技【工程】</div>
+    <div class="txt-headding">仏壇師 谷川彰</div>
 
     <div class="container">
       <div class="image">
