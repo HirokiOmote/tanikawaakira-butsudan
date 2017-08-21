@@ -4,23 +4,28 @@
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
+    <global-footer></global-footer>
   </div>
 </template>
 
 <script>
 import Navigation from './components/Navigation'
+import GlobalFooter from './components/GlobalFooter'
 
 export default {
   name: 'app',
 
   components: {
-    Navigation
+    Navigation,
+    GlobalFooter
   }
 }
 </script>
 
 <style src="reset-css/reset.css"></style>
 <style lang="scss">
+
+@import "./assets/scss/common";
 
 html {
   font: {

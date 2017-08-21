@@ -113,7 +113,10 @@ export default {
   background-size: cover;
 
   @include media( lg ) {
-    padding-left: 150px;
+    padding: {
+      left: 150px;
+      bottom: calc( 1.1rem + 30px );
+    }
   }
 }
 

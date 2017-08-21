@@ -38,7 +38,6 @@ export default {
 }
 
 .wrapper {
-  min-height: 100vh;
   background: rgba(#000, .85) url("../assets/images/about/bg_about.jpg") 50% 50% no-repeat;
   background-size: cover;
   font-size: 1.4rem;
@@ -51,7 +50,10 @@ export default {
   }
 
   @include media( lg ) {
-    padding-left: 150px;
+    padding: {
+      left: 150px;
+      bottom: calc( 1.1rem + 30px );
+    }
   }
 }
 
