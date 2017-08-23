@@ -5,6 +5,8 @@ $breakpoints: (
   'lg': 'screen and (min-width: 1140px)',
 ) !default;
 
+$slideCounts: 4;
+
 @mixin media( $breakpoint: md ) {
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;

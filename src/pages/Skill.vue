@@ -82,7 +82,11 @@
 
 <script>
 export default {
-  name: 'Skill'
+  name: 'Skill',
+  metaInfo: {
+    title: '匠の技 工程',
+    meta: [{ name: 'description', content: '富山県富山市にある谷川彰仏壇の工程を紹介するページです。仏壇が完成するまでの工程を簡単にご紹介しております。' }]
+  }
 }
 </script>
 

@@ -17,7 +17,12 @@
 
 <script>
 export default {
-  name: 'Address'
+  name: 'Address',
+  metaInfo: {
+    title: '仏壇師 谷川彰',
+    meta: [{ name: 'description', content: '富山県富山市にある谷川彰仏壇の紹介ページです。谷川仏壇の歴史と、仏壇師である3代目「谷川彰」の思いをご紹介しております。'
+    }]
+  }
 }
 </script>
 

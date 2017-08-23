@@ -14,6 +14,16 @@ import GlobalFooter from './components/GlobalFooter'
 
 export default {
   name: 'app',
+  metaInfo: {
+    title: '富山仏壇・仏具 谷川彰仏壇',
+    titleTemplate: '%s | 富山県富山市の仏壇師',
+    meta: [
+      { charset: 'utf-8' },
+      { httpEquiv: 'X-UA-Compatible', content: 'IE=edge' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'viewport', content: 'width=device-width,initial-scale=1,minimum-scale=1.0' }
+    ]
+  },
 
   components: {
     Navigation,

@@ -1,5 +1,7 @@
 <template>
   <div class="wrapper">
+    <top-slide></top-slide>
+
     <div class="logo">
       <img src="../assets/images/common/logo.svg" alt="谷川彰仏壇店">
     </div>
@@ -12,8 +14,20 @@
 </template>
 
 <script>
+import TopSlide from '@/components/TopSlide'
+
 export default {
-  name: 'top'
+  name: 'top',
+  components: {
+    TopSlide
+  },
+
+  metaInfo: {
+    title: '富山仏壇・仏具 谷川彰仏壇 │ 富山県富山市の仏壇師',
+    titleTemplate: null,
+    meta: [{ name: 'description', content: '富山県富山市にある谷川彰仏壇は大正時代初期に創業し、時は流れても脈々と受け継がれてきた職人技は変わらぬ価値を維持し続けている。下地から組み立てまでを一括で行う仏壇職人 3代目「谷川彰」による本物の職人技と共鳴した最高の仏壇をご提供しております。'
+    }]
+  }
 }
 </script>
 
@@ -29,8 +43,6 @@ export default {
   width: 100vw;
   min-height: 568px;
   height: 100vh;
-  background: #fff url("../assets/images/top/bg_top001.jpg") 50% 50% no-repeat;
-  background-size: cover;
 
   @include media( md ) {
     height: 100vh;
@@ -39,6 +51,11 @@ export default {
   @include media( lg ) {
     padding-left: 150px;
   }
+}
+
+.logo,
+.txt {
+  z-index: 2;
 }
 
 .logo {

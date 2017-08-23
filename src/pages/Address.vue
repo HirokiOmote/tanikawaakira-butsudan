@@ -18,7 +18,13 @@
 
 <script>
 export default {
-  name: 'Address'
+  name: 'Address',
+  metaInfo: {
+    title: '所在地',
+    meta: [{
+      name: 'description', content: '富山県富山市にある谷川彰仏壇の店舗情報ページです。谷川彰仏壇は富山県の富山市上二杉にあります。もし場所がお分かりになられない場合やお問合わせの際はお気軽にお電話下さい。'
+    }]
+  }
 }
 </script>
 

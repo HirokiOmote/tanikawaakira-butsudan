@@ -20,6 +20,7 @@
     "v-media-query": "^1.0.3",
     "vue": "^2.3.3",
     "vue-gtm": "^1.0.2",
+    "vue-meta": "^1.1.0",
     "vue-router": "^2.6.0"
   },
   "devDependencies": {
