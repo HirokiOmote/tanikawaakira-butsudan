@@ -47,7 +47,6 @@
         const scrollOff = (event) => {
           if (this.menu && window.innerWidth < 1140) {
             event.preventDefault()
-            console.log('noScroll')
           }
         }
         document.addEventListener('touchmove', scrollOff, false)
@@ -105,9 +104,9 @@ a {
 
 .logo {
   position: absolute;
-  bottom: 3vh;
+  bottom: 15vh;
   left: 50px;
-  z-index: 100;
+  z-index: 1000;
   display: block;
   width: 39px;
 
@@ -117,6 +116,10 @@ a {
     img {
       width: 100%;
     }
+  }
+
+  @include media( lg ) {
+    bottom: 5vh;
   }
 }
 

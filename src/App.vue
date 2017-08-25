@@ -21,7 +21,7 @@ export default {
       { charset: 'utf-8' },
       { httpEquiv: 'X-UA-Compatible', content: 'IE=edge' },
       { name: 'format-detection', content: 'telephone=no' },
-      { name: 'viewport', content: 'width=device-width,initial-scale=1,minimum-scale=1.0' }
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }
     ]
   },
 

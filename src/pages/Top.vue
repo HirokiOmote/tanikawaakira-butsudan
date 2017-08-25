@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" ref='wrap'>
     <top-slide></top-slide>
 
     <div class="logo">
@@ -27,6 +27,24 @@ export default {
     titleTemplate: null,
     meta: [{ name: 'description', content: '富山県富山市にある谷川彰仏壇は大正時代初期に創業し、時は流れても脈々と受け継がれてきた職人技は変わらぬ価値を維持し続けている。下地から組み立てまでを一括で行う仏壇職人 3代目「谷川彰」による本物の職人技と共鳴した最高の仏壇をご提供しております。'
     }]
+  },
+
+  mounted () {
+    this.screenResize()
+    this.fullScreen()
+  },
+
+  methods: {
+    screenResize () {
+      window.addEventListener('orientationchange', () => {
+        this.fullScreen()
+      })
+    },
+
+    fullScreen () {
+      const screenHeight = window.innerHeight
+      this.$refs.wrap.style.height = `calc( ${screenHeight}px - 1.1rem - 30px )`
+    }
   }
 }
 </script>
@@ -41,8 +59,8 @@ export default {
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  min-height: 568px;
-  height: 100vh;
+  min-height: 380px;
+  z-index: 1;
 
   @include media( md ) {
     height: 100vh;
@@ -59,6 +77,7 @@ export default {
 }
 
 .logo {
+  max-width: 15vw;
   @include media( lg ) {
     display: none;
   }

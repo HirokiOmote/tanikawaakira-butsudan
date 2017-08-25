@@ -16,14 +16,13 @@ export default {
 <style lang="scss" scoped>
   @import "../assets/scss/common";
 
-  ul,
-  ul:after {
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      z-index: 1;
+  ul {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
 
   li {

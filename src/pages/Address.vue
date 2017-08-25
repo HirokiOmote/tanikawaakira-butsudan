@@ -50,7 +50,7 @@ export default {
   align-items: center;
   justify-content: center;
   padding: 15px;
-  min-height: calc( 568px - 46px - 1.1rem - 30px);
+  min-height: calc( 480px - 46px - 1.1rem - 30px);
   height: calc( 100vh - 46px - 1.1rem - 30px);
   background: rgba(#000, .85) url("../assets/images/address/bg_address.jpg") 50% 50% no-repeat;
   background-size: cover;
