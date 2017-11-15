@@ -12,6 +12,7 @@
             <li><router-link :to="{ path: '/' }" v-on:click.native='menuClick' exact>トップ</router-link></li>
             <li><router-link :to="{ path: 'about' }" v-on:click.native='menuClick'>仏壇師 谷川彰</router-link></li>
             <li><router-link :to="{ path: 'skill' }" v-on:click.native='menuClick'>匠の技 工程</router-link></li>
+            <li><router-link :to="{ path: 'garelly' }" v-on:click.native='menuClick'>ギャラリー</router-link></li>
             <li><router-link :to="{ path: 'address' }" v-on:click.native='menuClick'>所在地</router-link></li>
           </ul>
         </nav>

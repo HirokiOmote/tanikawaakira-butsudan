@@ -4,6 +4,7 @@ import VueMeta from 'vue-meta'
 import Top from '@/pages/Top'
 import About from '@/pages/About'
 import Skill from '@/pages/Skill'
+import Gallery from '@/pages/Gallery'
 import Address from '@/pages/Address'
 
 Vue.use(Router)
@@ -28,6 +29,11 @@ export default new Router({
       path: '/skill/',
       name: 'Skill',
       component: Skill
+    },
+    {
+      path: '/garelly/',
+      name: 'Gallery',
+      component: Gallery
     },
     {
       path: '/address/',
