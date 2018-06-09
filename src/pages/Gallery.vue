@@ -1,16 +1,28 @@
 <template>
   <div class="wrapper">
-    <div class="txt-headding">ギャラリー</div>
     <gallery :images="images" :index="index" @close="index = null"></gallery>
 
-    <ul>
-      <li
-        class="image"
-        v-for="image, imageIndex in images"
-        @click="index = imageIndex"
-        :style="{ backgroundImage: 'url(' + image + ')' }">
-      </li>
-    </ul>
+    <section>
+      <h2 class="txt-headding">販売</h2>
+      <ul class="sale-list">
+        <li>
+          <img src="/static/images/sale/img_sale001.jpg" alt="">
+          <p>70代：350万円～（税別）<br>120代：750万円～（税別）</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="txt-headding">ギャラリー</h2>
+      <ul>
+        <li
+          class="image"
+          v-for="image, imageIndex in images"
+          @click="index = imageIndex"
+          :style="{ backgroundImage: 'url(' + image + ')' }">
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
 
@@ -114,21 +126,24 @@ export default {
 @import "../assets/scss/common";
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
   min-height: 100vh;
   background: rgba(#000, .85) url("../assets/images/gallery/bg_gallery.jpg") 50% 50% no-repeat;
   background-size: cover;
 
   @include media( lg ) {
     padding: {
+      top: 40px;
       left: 150px;
       bottom: calc( 1.1rem + 30px );
     }
   }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .txt-headding {
@@ -138,10 +153,6 @@ export default {
   width: 100vw;
   height: 46px;
   font-size: 2.0rem;
-
-  @include media( md ) {
-    display: none;
-  }
 }
 
 ul {
@@ -149,6 +160,7 @@ ul {
   flex-wrap: wrap;
   padding: 1.5vw;
   max-width: 601.5px;
+  width: 100%;
 
   @include media( sm ) {
     max-width: 700.5px;
@@ -177,6 +189,36 @@ ul {
 
   @include media( sm ) {
     margin: 7.5px;
+  }
+}
+
+.sale-list {
+  justify-content: center;
+  margin: -20px 0;
+
+  @media (min-width: 768px) {
+    width: calc(100% + 61px);
+    justify-content: flex-start;
+    margin: -38px;
+    max-width: 913.5px;
+  }
+
+  li {
+    margin: 30.5px;
+
+    @media (min-width: 768px) {
+      width: calc(100% / 3 - 61px - 0.01px);
+    }
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      margin-top: .5em;
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
   }
 }
 </style>

@@ -10,6 +10,10 @@
       <h1><img src="../assets/images/top/txt_001.svg" alt="至宝"></h1>
       <p><img src="../assets/images/top/txt_002.svg" alt="伝統工芸が極めた匠が織りなす唯一無二のモノ"></p>
     </div>
+
+    <div class="youtube">
+      <iframe src="https://www.youtube.com/embed/gEDO2QCteFE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
   </div>
 </template>
 
@@ -117,6 +121,27 @@ export default {
       width: auto;
       height: auto;
     }
+  }
+}
+
+.youtube {
+  position: relative;
+  z-index: 100;
+  margin-top: 31px;
+  width: 247px;
+  height: 139px;
+
+  @media (min-width: 375px) {
+    width: 270px;
+    height: 152px;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100%;
   }
 }
 </style>
